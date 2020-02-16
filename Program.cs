@@ -41,8 +41,7 @@ namespace BuilderDesignPattern
             //now nicely formatted using and html construct (oop way)
             // it will always build up trees of html elements
             var builder = new HtmlBuilder("ul");
-            builder.AddChild("li", "hello");
-            builder.AddChild("li", "world");
+            builder.AddChild("li", "hello").AddChild("li", "world"); //chaining calls
 
             Console.WriteLine(builder.ToString());
 

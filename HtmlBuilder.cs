@@ -20,10 +20,12 @@ namespace BuilderDesignPattern
             root.Name = rootName;
         }
 
-        public void AddChild(string childName, string childText)
+        public HtmlBuilder AddChild(string childName, string childText)
         {
             var element = new HtmlElement(childName, childText);
             root.Elements.Add(element);
+
+            return this;
         }
 
         public override string ToString()
