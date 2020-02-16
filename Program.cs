@@ -18,6 +18,7 @@ namespace BuilderDesignPattern
     {
         static void Main(string[] args)
         {
+            //low-level builder            
             var hello = "hello";
             var sb = new StringBuilder();
             sb.Append("<p>");
@@ -25,6 +26,8 @@ namespace BuilderDesignPattern
             sb.Append("</p>");
             Console.WriteLine(sb);
 
+            //does not build up different html objects, that's
+            //why we need an HtmlBuilder
             var words = new string[] { "hello", "world" };
             sb.Clear();
             sb.Append("<ul>");
@@ -34,6 +37,14 @@ namespace BuilderDesignPattern
             }
             sb.Append("</ul>");
             Console.WriteLine(sb);
+
+            //now nicely formatted using and html construct (oop way)
+            // it will always build up trees of html elements
+            var builder = new HtmlBuilder("ul");
+            builder.AddChild("li", "hello");
+            builder.AddChild("li", "world");
+
+            Console.WriteLine(builder.ToString());
 
             Console.ReadLine();
         }
