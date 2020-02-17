@@ -15,8 +15,12 @@ namespace FluentBuilderInheritance
     {
         static void Main(string[] args)
         {
-            var builder = new PersonJobBuilder();
-            builder.Called("Mark");
+            //var builder = new PersonJobBuilder();
+            //builder.Called("Mark"); // problem is that we cannot do chain calls of methods
+
+            //uses fluent inheritance builder api
+            var person = Person.New.Called("Mark").WorksAsA("teacher").Build();
+            Console.WriteLine(person);
 
             Console.ReadLine();
         }

@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuilderDesignPattern", "BuilderDesignPattern.csproj", "{F5370410-5E31-4292-A259-26FA6252F80E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilderInheritance", "..\FluentBuilderInheritance\FluentBuilderInheritance.csproj", "{F8459E0B-6963-4388-835B-CDA27A32DFE5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FluentBuilderInheritance", "FluentBuilderInheritance\FluentBuilderInheritance.csproj", "{F8459E0B-6963-4388-835B-CDA27A32DFE5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
